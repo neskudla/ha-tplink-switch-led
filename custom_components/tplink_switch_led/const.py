@@ -1,0 +1,7 @@
+DOMAIN = "tplink_switch_led"
+CONF_URL = "url"
+CONF_USERNAME = "username"
+CONF_PASSWORD = "password"
+DEFAULT_NAME = "TP-Link Switch LED"
+MANUFACTURER = "TP-Link"
+MODEL = "TL-SG105PE / Easy Smart Switch"

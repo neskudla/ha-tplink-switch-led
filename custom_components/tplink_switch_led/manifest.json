@@ -1,0 +1,11 @@
+{
+  "domain": "tplink_switch_led",
+  "name": "TP-Link Switch LED",
+  "version": "0.1.6",
+  "config_flow": true,
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "requirements": [
+    "requests>=2.31.0"
+  ]
+}
