@@ -1,4 +1,4 @@
 # Changelog
 
-## 0.2.5
-- fixed package completeness
+## 0.2.6
+- fixed icon
