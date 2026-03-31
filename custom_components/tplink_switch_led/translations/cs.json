@@ -9,9 +9,6 @@
           "password": "Heslo"
         }
       }
-    },
-    "abort": {
-      "already_configured": "Tento switch u\u017e je nakonfigurovan\u00fd"
     }
   }
 }

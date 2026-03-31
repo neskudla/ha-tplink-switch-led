@@ -9,9 +9,6 @@
           "password": "Password"
         }
       }
-    },
-    "abort": {
-      "already_configured": "This switch is already configured"
     }
   }
 }
