@@ -1,20 +1,25 @@
 # TP-Link Switch LED
 
-Custom Home Assistant integration pro ovládání LED na podporovaných TP-Link Easy Smart switchích.
+Custom Home Assistant integrace pro ovládání LED na podporovaných TP-Link Easy Smart switchích.
 
 ## Co umí
 - přidání přes UI (`config_flow`)
 - jedna `switch` entita pro zapnutí a vypnutí LED
+- čtení aktuálního stavu z `TurnOnLEDRpm.htm`
 - HACS-ready struktura
 - lokální brand ikony pro Home Assistant
 - root `icon.png` pro HACS
 - debug logování HTTP kroků
-- bez čtení aktuálního stavu LED (`assumed_state`)
 
 ## Jak funguje
 Integrace používá:
 - `POST /logon.cgi`
 - `GET /led_on_set.cgi?rd_led=0|1&led_cfg=Apply`
+- `GET /TurnOnLEDRpm.htm` pro čtení stavu
+
+Stav se čte z JavaScript proměnné:
+- `var led = 0`
+- `var led = 1`
 
 ## Instalace
 1. Nahraj obsah tohoto balíčku do GitHub repa.
@@ -32,7 +37,3 @@ logger:
   logs:
     custom_components.tplink_switch_led: debug
 ```
-
-## Poznámky
-- Stav entity je optimistický, protože se nečte skutečný stav LED zpět ze switche.
-- Tato verze je určená pro použití přímo z `main`.
