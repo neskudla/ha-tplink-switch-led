@@ -1,13 +1,12 @@
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
-
 from .const import DOMAIN
 
-async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+async def async_setup(hass: HomeAssistant, config: dict)->bool:
     return True
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    hass.data.setdefault(DOMAIN, {})
-    hass.data[DOMAIN][entry.entry_id] = dict(entry.data)
-    await hass.config_entries.async_forward_entry_setups(entry, ["switch"])
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry)->bool:
+    hass.data.setdefault(DOMAIN,{})
+    hass.data[DOMAIN][entry.entry_id]=dict(entry.data)
+    await hass.config_entries.async_forward_entry_setups(entry,["switch"])
     return True
