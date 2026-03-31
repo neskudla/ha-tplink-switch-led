@@ -2,13 +2,17 @@
   "config": {
     "step": {
       "user": {
-        "title": "P\u0159idat TP-Link Switch LED",
+        "title": "Přidat TP-Link Switch LED",
+        "description": "Zadej připojovací údaje ke switchi.",
         "data": {
           "url": "URL switche",
-          "username": "U\u017eivatelsk\u00e9 jm\u00e9no",
+          "username": "Uživatelské jméno",
           "password": "Heslo"
         }
       }
+    },
+    "abort": {
+      "already_configured": "Tento switch už je nakonfigurovaný"
     }
   }
 }

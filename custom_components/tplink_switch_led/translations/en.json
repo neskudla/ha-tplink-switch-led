@@ -3,12 +3,16 @@
     "step": {
       "user": {
         "title": "Add TP-Link Switch LED",
+        "description": "Enter the connection details for your switch.",
         "data": {
           "url": "Switch URL",
           "username": "Username",
           "password": "Password"
         }
       }
+    },
+    "abort": {
+      "already_configured": "This switch is already configured"
     }
   }
 }
