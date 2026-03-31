@@ -1,13 +1,14 @@
 # TP-Link Switch LED
 
-Debug build for Home Assistant / HACS.
+Build for Home Assistant / HACS with local integration brand assets.
 
-## Co umí
-- přidání přes UI
-- vytvoření jedné `switch` entity
-- zapnutí/vypnutí LED přes web rozhraní switche
-- žádné čtení aktuálního stavu
+## Co obsahuje
+- `icon.png` v rootu pro HACS
+- `custom_components/tplink_switch_led/brand/icon.png`
+- `custom_components/tplink_switch_led/brand/logo.png`
+- jednu `switch` entitu
 - debug logování HTTP kroků
+- žádné čtení aktuálního stavu
 
 ## Logování
 Pro zapnutí debug logů přidej do `configuration.yaml`:
@@ -19,9 +20,7 @@ logger:
     custom_components.tplink_switch_led: debug
 ```
 
-Pak restartuj Home Assistant.
-
 ## Verze
-- `manifest.json`: `0.2.0`
+- `manifest.json`: `0.2.1`
 
-Tato verze je připravená pro použití přímo z `main`.
+Tato verze je určená pro použití přímo z `main`.

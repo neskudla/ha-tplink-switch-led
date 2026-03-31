@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-
 import voluptuous as vol
 
 from homeassistant import config_entries
@@ -10,7 +9,6 @@ from homeassistant.data_entry_flow import FlowResult
 from .const import CONF_PASSWORD, CONF_URL, CONF_USERNAME, DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
-
 
 class TpLinkSwitchLedConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     VERSION = 1

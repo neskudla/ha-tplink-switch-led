@@ -1,7 +1,6 @@
 # Changelog
 
-## v0.2.0
-- přidáno detailní debug logování loginu a LED requestů
-- zachováno jednoduché ovládání bez čtení stavu
-- ponecháno vytvoření jedné switch entity
-- přidána HACS ikona, README a changelog
+## v0.2.1
+- přidána lokální `brand/` složka pro Home Assistant
+- zachována HACS ikona v rootu
+- ponecháno debug logování a jedna switch entita

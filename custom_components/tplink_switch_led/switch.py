@@ -32,7 +32,6 @@ COMMON_HEADERS = {
     "Accept-Language": "cs,sk;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-
 async def async_setup_entry(
     hass: HomeAssistant,
     entry: ConfigEntry,
@@ -41,7 +40,6 @@ async def async_setup_entry(
     _LOGGER.debug("Creating switch entity for entry %s", entry.entry_id)
     data = hass.data[DOMAIN][entry.entry_id]
     async_add_entities([TpLinkLedSwitch(entry.entry_id, data)])
-
 
 class TpLinkLedSwitch(SwitchEntity):
     _attr_has_entity_name = True
