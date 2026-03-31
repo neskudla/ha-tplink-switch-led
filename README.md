@@ -21,6 +21,6 @@ logger:
 ```
 
 ## Verze
-- `manifest.json`: `0.2.1`
+- `manifest.json`: `0.2.2`
 
 Tato verze je určená pro použití přímo z `main`.
