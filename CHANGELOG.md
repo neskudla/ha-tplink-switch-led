@@ -1,8 +1,7 @@
 # Changelog
 
-## v0.2.11
-- opraven config flow handler
+## v0.2.12
+- další oprava config flow handleru
+- zjednodušené moduly kvůli kompatibilitě
 - on-demand refresh bez pravidelného pollingu
 - cache stavu na 30 sekund
-- zachováno čtení stavu z `TurnOnLEDRpm.htm`
-- zachována finální ikona ve všech místech

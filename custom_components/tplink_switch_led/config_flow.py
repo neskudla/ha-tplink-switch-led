@@ -1,13 +1,7 @@
-from __future__ import annotations
-
-import logging
 import voluptuous as vol
-
 from homeassistant import config_entries
 
 from .const import CONF_PASSWORD, CONF_URL, CONF_USERNAME, DOMAIN
-
-_LOGGER = logging.getLogger(__name__)
 
 
 class TpLinkSwitchLedConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
@@ -28,11 +22,13 @@ class TpLinkSwitchLedConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 },
             )
 
-        schema = vol.Schema(
-            {
-                vol.Required(CONF_URL, default="http://switch.local"): str,
-                vol.Required(CONF_USERNAME, default="admin"): str,
-                vol.Required(CONF_PASSWORD, default=""): str,
-            }
+        return self.async_show_form(
+            step_id="user",
+            data_schema=vol.Schema(
+                {
+                    vol.Required(CONF_URL, default="http://switch.local"): str,
+                    vol.Required(CONF_USERNAME, default="admin"): str,
+                    vol.Required(CONF_PASSWORD, default=""): str,
+                }
+            ),
         )
-        return self.async_show_form(step_id="user", data_schema=schema)

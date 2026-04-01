@@ -1,9 +1,5 @@
-from __future__ import annotations
-
 import logging
 
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
 from .api import TpLinkSwitchLedApi
@@ -12,11 +8,11 @@ from .const import CONF_PASSWORD, CONF_URL, CONF_USERNAME, DOMAIN
 _LOGGER = logging.getLogger(__name__)
 
 
-async def async_setup(hass: HomeAssistant, config: dict) -> bool:
+async def async_setup(hass, config):
     return True
 
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+async def async_setup_entry(hass, entry):
     hass.data.setdefault(DOMAIN, {})
 
     api = TpLinkSwitchLedApi(
@@ -48,7 +44,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     return True
 
 
-async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+async def async_unload_entry(hass, entry):
     unload_ok = await hass.config_entries.async_unload_platforms(entry, ["switch"])
     if unload_ok:
         hass.data.get(DOMAIN, {}).pop(entry.entry_id, None)
