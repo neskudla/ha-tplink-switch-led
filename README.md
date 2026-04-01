@@ -6,6 +6,8 @@ Custom Home Assistant integrace pro ovládání LED na podporovaných TP-Link Ea
 - přidání přes UI (`config_flow`)
 - jedna `switch` entita pro zapnutí a vypnutí LED
 - čtení aktuálního stavu z `TurnOnLEDRpm.htm`
+- on-demand refresh bez periodického pollingu
+- krátká cache stavu (30 sekund)
 - HACS-ready struktura
 - lokální brand ikony pro Home Assistant
 - root `icon.png` pro HACS
@@ -20,6 +22,12 @@ Integrace používá:
 Stav se čte z JavaScript proměnné:
 - `var led = 0`
 - `var led = 1`
+
+## Chování aktualizace
+- žádný pravidelný polling
+- stav se obnoví při použití entity
+- po zapnutí/vypnutí LED se stav hned refreshne
+- krátká cache omezuje zbytečné loginy při rychlém otevírání UI
 
 ## Instalace
 1. Nahraj obsah tohoto balíčku do GitHub repa.

@@ -7,3 +7,4 @@ DEFAULT_NAME = "Switch LED"
 MANUFACTURER = "TP-Link"
 MODEL = "TL-SG105PE / Easy Smart Switch"
 STATE_PAGE = "TurnOnLEDRpm.htm"
+CACHE_SECONDS = 30
